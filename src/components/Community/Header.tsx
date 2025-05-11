@@ -9,7 +9,6 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { Community } from "../../atoms/CommunitiesAtom";
-import { FaReddit } from "react-icons/fa";
 import useCommunityData from "../../hooks/useCommunityData";
 
 type HeaderProps = {
@@ -41,15 +40,14 @@ const Header: React.FC<HeaderProps> = ({ communityData }) => {
               border="4px solid white"
             />
           ) : (
-            <Icon
-              as={FaReddit}
-              fontSize={64}
-              position="relative"
-              top={-3}
-              color="blue.500"
-              border="4px solid white"
-              borderRadius="50%"
-            />
+            <Image 
+            src="/images/header.png" 
+            alt="Header Image" 
+            width={50} 
+            height={50} 
+            style={{ marginRight: '16px', marginTop: '8px' }} 
+          />
+          
           )}
           <Flex padding="10px 16px">
             <Flex direction="column" mr={6}>

@@ -28,7 +28,7 @@ const SearchInput: React.FC<SearchInputProps> = ({ user }) => {
         </InputLeftElement>
         <Input
           type="tel"
-          placeholder="Search Reddit"
+          placeholder="Search Community"
           fontSize="10pt"
           bg={bg}
           _placeholder={{ colors: "gray.500" }}

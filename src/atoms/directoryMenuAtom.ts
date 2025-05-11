@@ -2,13 +2,13 @@ import { atom } from "recoil";
 import { IconType } from "react-icons";
 import { TiHome } from "react-icons/ti";
 
-export type DirectoryMenuItem = {
+export interface DirectoryMenuItem {
   displayText: string;
   link: string;
-  icon: IconType;
-  iconColor: string;
-  imageURL?: string;
-};
+  imageURL?: string;  // Made optional
+  icon?: React.ElementType;
+  iconColor?: string;
+}
 
 interface DirectoryMenuState {
   isOpen: boolean;

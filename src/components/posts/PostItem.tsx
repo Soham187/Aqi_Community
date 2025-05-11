@@ -17,7 +17,7 @@ import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { AiOutlineDelete } from "react-icons/ai";
 import { BsChat, BsDot } from "react-icons/bs";
-import { FaReddit } from "react-icons/fa";
+
 import {
   IoArrowDownCircleOutline,
   IoArrowDownCircleSharp,
@@ -193,7 +193,14 @@ const PostItem: React.FC<PostItemProps> = ({
                     mr={2}
                   />
                 ) : (
-                  <Icon as={FaReddit} fontSize="18px" color="blue.500" />
+                  <Image
+                    src="/images/header_pink.png"
+                    alt="Reddit Logo"
+                    width={30}
+                    height={30}
+                    style={{ marginRight: '8px' }}
+                  />
+
                 )}
                 <Link href={`r/${post.communityId}`}>
                   <Text

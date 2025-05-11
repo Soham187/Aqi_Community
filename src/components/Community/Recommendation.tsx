@@ -13,7 +13,7 @@ import {
 import { collection, getDocs, orderBy, query } from "firebase/firestore";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import { FaReddit } from "react-icons/fa";
+
 
 import { Community } from "../../atoms/CommunitiesAtom";
 import { firestore } from "../../firebase/clientApp";
@@ -132,12 +132,14 @@ const Recommendation: React.FC = () => {
                             mr={2}
                           />
                         ) : (
-                          <Icon
-                            as={FaReddit}
-                            fontSize={30}
-                            color="brand.100"
-                            mr={2}
+                          <Image
+                            src="/images/header.png"
+                            alt="Reddit Logo"
+                            width={30}
+                            height={30}
+                            style={{ marginRight: '8px' }}
                           />
+
                         )}
                         <span
                           style={{

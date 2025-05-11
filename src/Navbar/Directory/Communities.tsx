@@ -7,10 +7,9 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
-import { FaReddit } from "react-icons/fa";
 import { GrAdd } from "react-icons/gr";
 import { useRecoilValue } from "recoil";
-
+import { FaReddit } from "react-icons/fa";
 import { CommunityState } from "../../atoms/CommunitiesAtom";
 import CreateCommunityModel from "../../components/Modal/CreateCommunity/CreateCommunityModel";
 import MenuListItem from "./MenuListItem";
@@ -36,13 +35,14 @@ const Communities: React.FC<CommunitiesProps> = () => {
           .map((snippet) => (
             <MenuListItem
               key={snippet.communityId}
-              icon={FaReddit}
               displayText={`r/${snippet.communityId}`}
               link={`/r/${snippet.communityId}`}
-              iconColor={"brand.100"}
-              imageURL={snippet.imageURL}
+              imageURL={snippet.imageURL || "/images/header.png"}  // Default image if imageURL is missing
             />
           ))}
+
+
+
       </Box>
 
       <Box mt={3} mb={4}>
@@ -65,11 +65,9 @@ const Communities: React.FC<CommunitiesProps> = () => {
         {mySnippets.map((snippet) => (
           <MenuListItem
             key={snippet.communityId}
-            icon={FaReddit}
             displayText={`r/${snippet.communityId}`}
             link={`/r/${snippet.communityId}`}
-            iconColor={"blue.500"}
-            imageURL={snippet.imageURL}
+            imageURL={snippet.imageURL || "/images/header.png"}  // Default image if imageURL is missing
           />
         ))}
       </Box>

@@ -91,14 +91,14 @@ const Navbar: React.FC = () => {
         cursor="pointer"
         onClick={() => onSelectMenuItem(defaultMenuItem)}
       >
-        <Image src="/images/redditFace.svg" height="30px" />
+        <Image src="/images/AeroSync.svg" height="35px" />
         <Image
           src={
             colorMode === "light"
-              ? "/images/redditText.svg"
-              : "/images/Reddit-Word-Dark.svg"
+              ? "/images/aerosync-high-resolution-logo-removebg-preview.png"
+              : "/images/aerosync-high-resolution-logo-removebg-preview.png"
           }
-          height="46px"
+          height="50px"
           display={{ base: "none", md: "unset" }}
         />
       </Flex>

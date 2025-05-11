@@ -7,7 +7,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
-import { FaReddit } from "react-icons/fa";
+import Image from 'next/image';
 
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../../firebase/clientApp";
@@ -43,12 +43,19 @@ const PersonalHome: React.FC = () => {
       ></Flex>
       <Flex direction="column" p="12px">
         <Flex align="center" mb={2}>
-          <Icon as={FaReddit} fontSize={50} color="brand.100" mr={2} />
+          <Image
+            src="/images/header.png"
+            alt="Reddit Logo"
+            width={30}
+            height={30}
+            style={{ marginRight: '8px' }}
+          />
+
           <Text fontWeight={600}>Home</Text>
         </Flex>
         <Stack spacing={3}>
           <Text fontSize="9pt">
-            Your personal Reddit frontpage, built for you.
+            Your personal AeroSync frontpage, built for you.
           </Text>
           <Button height="30px">Create Post</Button>
           <Button

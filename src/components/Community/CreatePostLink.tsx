@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { BsLink45Deg } from "react-icons/bs";
-import { FaReddit } from "react-icons/fa";
+import Image from 'next/image';
 import { IoImageOutline } from "react-icons/io5";
 import { useSetRecoilState } from "recoil";
 
@@ -56,7 +56,15 @@ const CreatePostLink: React.FC = () => {
       p={2}
       mb={4}
     >
-      <Icon as={FaReddit} fontSize={36} color="gray.300" mr={4} />
+      <Image 
+  src="/images/header.png" 
+  alt="Header Image" 
+  width={30} 
+  height={40} 
+  style={{ marginRight: '0px' }} 
+/>
+
+
       <Input
         placeholder="Create Post"
         fontSize="10pt"
